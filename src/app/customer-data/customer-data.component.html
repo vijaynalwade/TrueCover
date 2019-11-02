@@ -1,0 +1,138 @@
+
+<div>
+
+
+<form [formGroup]="registerForm">
+        <div class="container">
+
+<h2 class="company">Employee Database of TrueCover</h2>
+<h4 class="register"><b>Register Here!!</b></h4><br>
+
+<div class="form-group">
+Name : <input type="text" placeholder="Full Name" formControlName="Name">
+</div>
+
+ <div *ngIf="Name.touched && Name.invalid">
+        <div class="red" *ngIf="Name.errors.required">Name should not be empty</div>
+        <div  class="red" *ngIf="Name.errors.minlength">Name should contain atleast 5 Characters</div>
+        <div  class="red" *ngIf="Name.errors.maxlength">Name cannot exceed 10 Characters</div>
+      
+</div>
+
+
+
+<div class="form-group">
+Date of Birth : <input type="date" name="DOB">
+</div>
+
+<div class="form-group">
+   Gender : <select>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        </select>
+</div>
+
+<div class="form-group">
+Employee Id : <input type="text" placeholder="Full Name" formControlName="EmployeeId">
+</div>
+<div *ngIf="EmployeeId.touched && EmployeeId.invalid">
+        <div class="red" *ngIf="EmployeeId.errors.required">Employee Id should not be empty</div>
+        <div  class="red" *ngIf="EmployeeId.errors.minlength">Employee Id should contain atleast 5 Characters</div>
+        <div  class="red" *ngIf="EmployeeId.errors.maxlength">Employee Id cannot exceed 10 Characters</div>
+      </div>
+
+
+<div class="form-group">
+Designation : <input type="text" placeholder="Full Name" formControlName="Designation">
+</div>
+
+<div *ngIf="Designation.touched && Designation.invalid">
+        <div class="red" *ngIf="Designation.errors.required">Designation should not be empty</div>
+        <div  class="red" *ngIf="Designation.errors.minlength">Designation should contain atleast 5 Characters</div>
+        <div  class="red" *ngIf="Designation.errors.maxlength">Designation cannot exceed 30 Characters</div>
+      </div>
+
+
+
+<div class="form-group">
+Department : <input type="text" placeholder="Department" formControlName="Department">
+</div>
+
+<div *ngIf="Department.touched && Department.invalid">
+        <div class="red" *ngIf="Department.errors.required">Department should not be empty</div>
+        <div  class="red" *ngIf="Department.errors.minlength">Department should contain atleast 5 Characters</div>
+        <div  class="red" *ngIf="Department.errors.maxlength">Department cannot exceed 30 Characters</div>
+      </div>
+
+
+<div class="form-group">
+    <h5><b>Contact Info : </b></h5>
+Phone no : <input type="text" placeholder="Phone no" formControlName="Phoneno">
+
+<div *ngIf="Phoneno.touched && Phoneno.invalid">
+        <div class="red" *ngIf="Phoneno.errors.required">Phoneno should not be empty</div>
+        <div  class="red" *ngIf="Phoneno.errors.minlength">Phoneno should contain atleast 10 dgits</div>
+        <div  class="red" *ngIf="Phoneno.errors.maxlength">Phoneno cannot exceed 10 digits</div>
+      </div>
+
+<br><br>
+ Email Id : <input type="text" placeholder="Email Id" formControlName="EmailId"> 
+ <div *ngIf="EmailId.touched && EmailId.invalid">
+        <div class="red" *ngIf="EmailId.errors.required">EmailId should not be empty</div>
+        <div  class="red" *ngIf="EmailId.errors.minlength">EmailId should contain atleast 10 dgits</div>
+        <div  class="red" *ngIf="EmailId.errors.maxlength">EmailId cannot exceed 10 digits</div>
+      </div>
+</div>
+
+<div class="form-group">
+        <h5><b>Address : </b></h5>
+ Street Address : <input type="text" placeholder="Street Address" formControlName="Address" />
+ <div *ngIf="Address.touched && Address.invalid">
+        <div class="red" *ngIf="Address.errors.required">Address should not be empty</div>
+        <div  class="red" *ngIf="Address.errors.minlength">Address should contain atleast 10 dgits</div>
+        <div  class="red" *ngIf="Address.errors.maxlength">Address cannot exceed 10 digits</div>
+      </div>
+ 
+ 
+ <br><br>
+          City : <select name="city">
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Banglore">Karnataka</option>
+                <option value="New Delhi">New Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Chennai">Chennai</option>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+         State : <select name="state">
+                <option value="Telangana">Telangana</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Tamilnadu">Tamilnadu</option>
+                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+          Country : <select name="country">
+                     <option value="India">India</option>
+                     <option value="USA">USA</option>
+                     <option value="Russia">Russia</option>
+                     <option value="china">China</option>
+                     <option value="UK">UK</option>
+                     </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          Pincode : <input type="text" placeholder="Pincode" formControlName="Pincode">
+          <div *ngIf="Pincode.touched && Pincode.invalid">
+                <div class="red" *ngIf="Pincode.errors.required">Pincode should not be empty</div>
+                <div  class="red" *ngIf="Pincode.errors.minlength">Pincode should contain atleast 6 dgits</div>
+                <div  class="red" *ngIf="Pincode.errors.maxlength">Pincode cannot exceed 6 digits</div>
+              </div>
+</div>
+
+<button class=" btn btn-primary" value="Submit" onSubmit="Validate">Submit</button>
+
+        </div>
+</form>
+
+
+</div>
+
